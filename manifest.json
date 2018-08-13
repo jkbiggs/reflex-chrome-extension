@@ -1,0 +1,41 @@
+{
+  "name": "Reflex",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Add Element info to database",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128":"images/icon128.png",
+	"256":"images/icon256.png"
+  },
+  "background": {
+    "page": "menu.html"
+  },
+  "browser_action": {
+    "default_title": "Click to activate Reflex",
+	"default_icon": {
+  		"16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128":"images/icon128.png",
+  		"256":"images/icon256.png"
+	  },
+	"default_popup": "menu.html"
+  },
+  "content_scripts": [
+    {
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["js/reflex_chrome.js", "js/jquery.min.js"],
+		"css": ["css/font-awesome.min.css"]
+    }
+  ],
+  "web_accessible_resources":[
+    "css/*"
+  ],
+  "permissions": [
+	  "activeTab",
+      "https://fonts.googleapis.com/",
+	  "storage",
+	  "http://dev.reflex.systems/*"
+  ]
+}

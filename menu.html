@@ -1,0 +1,37 @@
+<html>
+    <head>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+		<link href="css/menu.css" rel='stylesheet' type='text/css'>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/menu.js"></script>
+		<!--move the js to bottom just before </body> -->
+    </head>
+	<body>
+		<div id="menu">
+			<div>
+				<span id="logInStatus"> Not linked to a Reflex account</span>
+				<span class="button"><button id="linkPageButton">Link</button></span>
+			</div>
+			<div>Reflex Extension Tools:</div>
+			<div id="elementSelector" class="tool">Dom Element Selector</div>
+			<div id="gridScraper" class="tool">AJS Grid Scraper</div>
+		</div>
+		<div id="logIn" style="display:none">
+			<div>
+				<span class="button"><button id="cancelButton">Cancel</button></span>
+			</div>
+			<div>Username</div>
+			<div>
+				<input type="text" id="username">
+			</div>
+			<div>Password</div>
+			<div>
+				<input type="password" id="password">
+			</div>
+			<div>
+				<button id="linkAccountButton">Link</button>
+			</div>
+		</div>
+		
+	</body>
+</html>
